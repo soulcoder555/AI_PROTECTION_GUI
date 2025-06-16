@@ -29,15 +29,58 @@ with st.sidebar:
 # --- Home Page ---
 if selected == "Home":
     st.markdown("""
-        <div style="padding: 30px; background-color: #111; border-radius: 10px; border: 1px solid #00FFC6;">
-            <h1 style="color:#FF5252; font-size: 38px;">🚨 AI Protection Console</h1>
-            <h2 style="color:#00FFC6;">Real-Time Monitoring & Automated Flagging</h2>
-            <p style="color:#BBB;">Scan AI-generated outputs to detect harmful or unsafe behavior including threats, harassment, and biases.</p>
-            <div style="margin-top: 20px; background-color: #333; padding: 15px; border-radius: 8px;">
-                <span style="color:#00FF00">System is currently active and monitoring 24/7.</span>
-            </div>
+        <style>
+            .neon-box {
+                padding: 20px;
+                border-radius: 12px;
+                margin-bottom: 20px;
+                text-align: center;
+                box-shadow: 0 0 15px #00ffc6, 0 0 30px #00ffc6;
+            }
+
+            .neon-title-green {
+                color: #39FF14;
+                font-size: 38px;
+                font-weight: bold;
+                background-color: #111;
+                border: 2px solid #39FF14;
+                box-shadow: 0 0 15px #39FF14, 0 0 30px #39FF14;
+            }
+
+            .neon-title-blue {
+                color: #00D9FF;
+                font-size: 28px;
+                background-color: #111;
+                border: 2px solid #00D9FF;
+                box-shadow: 0 0 10px #00D9FF, 0 0 20px #00D9FF;
+            }
+
+            .neon-paragraph {
+                color: #BBB;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+
+            .neon-status {
+                background-color: #222;
+                padding: 10px;
+                border-radius: 8px;
+                color: #00FF00;
+                font-weight: bold;
+                box-shadow: 0 0 10px #00FF00;
+            }
+        </style>
+
+        <div class="neon-box neon-title-green">🚨 AI Protection Console</div>
+        <div class="neon-box neon-title-blue">Real-Time Monitoring & Automated Flagging</div>
+
+        <div style="margin-top: 20px; background-color: #00BFFF; padding: 15px; border-radius: 8px;">
+        <p style="color:#CCFF00; margin: 0;">Scan AI-generated outputs to detect harmful or unsafe behavior including threats, harassment, and biases.</p>
+         <span style="color:#CCFF00; display: block; margin-top: 8px;">✅ System is currently active and monitoring 24/7.</span>
         </div>
+
     """, unsafe_allow_html=True)
+
 
 # --- Monitoring Dashboard ---
 elif selected == "Monitoring Dashboard":
